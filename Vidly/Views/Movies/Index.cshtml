@@ -1,0 +1,44 @@
+﻿@*@model List<Vidly.Models.Movie>*@
+
+@model  Vidly.Models.MoviesViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table>
+
+    <thead>
+    <th>
+        <span>
+            №
+        </span>
+    </th>
+    <th>
+        <span>
+            Название
+        </span>
+    </th>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model.MoviesList)
+        {
+            <tr>
+                <td>
+                    @item.id
+                </td>
+
+                <td>
+                    @item.Name
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
