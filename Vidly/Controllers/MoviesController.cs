@@ -15,6 +15,9 @@ namespace Vidly.Controllers
             var movie = new Movie { id = 1, Name = "Shrek" };
             var movie2 = new Movie { id = 2, Name = "Titnaic" };
             var movie3 = new Movie { id = 3, Name = "8 mile" };
+             var movie4 = new Movie { id = 1, Name = "Shrek" };
+            var movie5 = new Movie { id = 2, Name = "Titnaic" };
+            var movie7 = new Movie { id = 3, Name = "8 mile" };
 
             var movie4 = new Movie { id = 1, Name = "Shrek" };
             var movie5 = new Movie { id = 2, Name = "Titnaic" };
