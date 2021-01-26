@@ -15,28 +15,12 @@ namespace Vidly.Controllers
             var movie = new Movie { id = 1, Name = "Shrek" };
             var movie2 = new Movie { id = 2, Name = "Titnaic" };
             var movie3 = new Movie { id = 3, Name = "8 mile" };
-             var movie4 = new Movie { id = 1, Name = "Shrek" };
-            var movie5 = new Movie { id = 2, Name = "Titnaic" };
-            var movie7 = new Movie { id = 3, Name = "8 mile" };
-
-            var movie4 = new Movie { id = 1, Name = "Shrek" };
-            var movie5 = new Movie { id = 2, Name = "Titnaic" };
-            var movie6 = new Movie { id = 3, Name = "8 mile" };
-
-            /////TEST TEST TEST TEST 
-            ///  /////TEST TEST TEST TEST 
-            /////TEST TEST TEST TEST 
-            /////TEST TEST TEST TEST 
-            /////TEST TEST TEST TEST 
-            /////TEST TEST TEST TEST 
-
-
+            var movie4 = new Movie { id = 4, Name = "Pinokio" };
 
             //List<Movie> movies = new List<Movie> { movie, movie2, movie3, movie4 };
 
             //ViewBag.Movies = movies;
-            var movies = new List<Movie> { movie, movie2, movie3};
-
+            var movies = new List<Movie> { movie, movie2, movie3, movie4 };
             var ListMovies = new MoviesViewModel { MoviesList = movies };
 
             return View(ListMovies);
@@ -45,7 +29,14 @@ namespace Vidly.Controllers
 
         public ActionResult Random()
         {
-            return View();
+            var movieName = new Movie { Name = "Shrek" };
+            //return View(movieName);
+            return RedirectToAction("Index", "Home", new { page = 1, count = 3 });
+        }
+
+        public ActionResult Edit(int Id = 1)
+        {
+            return Content("ID=" + Id);
         }
     }
 }
