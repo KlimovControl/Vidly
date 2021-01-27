@@ -175,13 +175,50 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101270838475_InitialModel.cs" />
+    <Compile Include="Migrations\202101270838475_InitialModel.Designer.cs">
+      <DependentUpon>202101270838475_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101270852345_Add_IsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\202101270852345_Add_IsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>202101270852345_Add_IsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101270901361_AddMemeberShipType.cs" />
+    <Compile Include="Migrations\202101270901361_AddMemeberShipType.Designer.cs">
+      <DependentUpon>202101270901361_AddMemeberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101270906148_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202101270906148_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>202101270906148_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101270920195_Edit_CustomerFeild_nme_property.cs" />
+    <Compile Include="Migrations\202101270920195_Edit_CustomerFeild_nme_property.Designer.cs">
+      <DependentUpon>202101270920195_Edit_CustomerFeild_nme_property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101271138355_Add_membershiptypeName.cs" />
+    <Compile Include="Migrations\202101271138355_Add_membershiptypeName.Designer.cs">
+      <DependentUpon>202101271138355_Add_membershiptypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101271454447_DateOfBirthCustomer.cs" />
+    <Compile Include="Migrations\202101271454447_DateOfBirthCustomer.Designer.cs">
+      <DependentUpon>202101271454447_DateOfBirthCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101271529187_AddNullableDateOfBirth.cs" />
+    <Compile Include="Migrations\202101271529187_AddNullableDateOfBirth.Designer.cs">
+      <DependentUpon>202101271529187_AddNullableDateOfBirth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101271632199_UpdateMoviesDB.cs" />
+    <Compile Include="Migrations\202101271632199_UpdateMoviesDB.Designer.cs">
+      <DependentUpon>202101271632199_UpdateMoviesDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\MoviesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -246,6 +283,7 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -263,6 +301,35 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101270838475_InitialModel.resx">
+      <DependentUpon>202101270838475_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101270852345_Add_IsSubscribedToCustomer.resx">
+      <DependentUpon>202101270852345_Add_IsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101270901361_AddMemeberShipType.resx">
+      <DependentUpon>202101270901361_AddMemeberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101270906148_PopulateMembershipTypes.resx">
+      <DependentUpon>202101270906148_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101270920195_Edit_CustomerFeild_nme_property.resx">
+      <DependentUpon>202101270920195_Edit_CustomerFeild_nme_property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101271138355_Add_membershiptypeName.resx">
+      <DependentUpon>202101271138355_Add_membershiptypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101271454447_DateOfBirthCustomer.resx">
+      <DependentUpon>202101271454447_DateOfBirthCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101271529187_AddNullableDateOfBirth.resx">
+      <DependentUpon>202101271529187_AddNullableDateOfBirth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101271632199_UpdateMoviesDB.resx">
+      <DependentUpon>202101271632199_UpdateMoviesDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
