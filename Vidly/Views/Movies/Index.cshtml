@@ -7,14 +7,10 @@
 
 <h2>Movies</h2>
 
-<table>
-
+<table class="table table-stripped">
     <thead>
     <th>
         Movie
-    </th>
-    <th>
-        |
     </th>
     <th>
         Genre
@@ -25,7 +21,6 @@
         {
         <tr>
             <td>@Html.ActionLink(@item.Name, "Details", new { id = item.id })</td>
-            <td>  | </td>
             <td> @item.Genre.GenreName</td>
         </tr>
         }

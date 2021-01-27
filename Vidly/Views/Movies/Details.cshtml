@@ -11,8 +11,8 @@
 
 <body>
     <li> Genre: @Model.Genre.GenreName</li>
-    <li> ReleaseDate: @Model.ReleaseDate</li>
-    <li> Date Added: @Model.DateAdded</li>
+    <li> ReleaseDate: @Model.ReleaseDate.ToShortDateString()</li>
+    <li> Date Added: @Model.DateAdded.ToShortDateString()</li>
     <li> Number in Stock: @Model.NumInStock</li>
 </body>
 
