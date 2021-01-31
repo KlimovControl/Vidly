@@ -1,0 +1,37 @@
+﻿@using Vidly.ViewModels
+@model CustomerFormViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New customer</h2>
+
+@using (Html.BeginForm("Save", "Customers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Name, "Customer name")
+        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.DateOfBirth)
+        @Html.TextBoxFor(m => m.Customer.DateOfBirth, "{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select type of mebership", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.IsSubscribedToNewsLetter, "Subscribe to news")
+        @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsLetter, new { @class = "form-chek" })
+        @*<div class="checkbox">
+                <label>S
+                   ----- <input type="checkbox"> Subscribe to news
+                   +++++ @Html.CheckBoxFor(m => m.IsSubscribedToNewsLetter) "Subscribe to news" //----, new { @class = "form-chek" })
+                </label>
+            </div>*@
+    </div>
+        @Html.HiddenFor(m=>m.Customer.Id)
+    <button class="btn btn-primary">Save</button>
+}
+
